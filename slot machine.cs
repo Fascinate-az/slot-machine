@@ -1,3 +1,4 @@
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 Console.WriteLine("per giocare inserire almeno 1 euro e premere invio");
 
 var cash = Convert.ToInt32(Console.ReadLine());
@@ -7,7 +8,7 @@ var creditoResiduo = cash;
 if (cash > 0 ){
     var tentativi = 0;
     Random numGen = new Random();
-    string[]simboli = {"piramide","faraone","scarabeo","palma","gatto","cleopatra","occhio di Ra","Falco"};
+    string[]simboli = {"🌴","🍒","🐉","🪳","🦜","👁️"};
     while(creditoResiduo>0){
         var tiro1 = simboli[numGen.Next(0,simboli.Length)];
         var tiro2 = simboli[numGen.Next(0,simboli.Length)];
@@ -70,4 +71,6 @@ int scelta(){
 }
 
 Console.ReadKey();
+
+
 
